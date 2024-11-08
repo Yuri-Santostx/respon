@@ -1,0 +1,332 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --font-harry:'Harry Potter', sans-serif;
+    --montserrar:"Montserrat", serif;
+    --vermelho:#a6332e;
+    --amarelo:#efbc2f;
+    --azul:#3c4e91;
+    --verde:#366447;
+}
+body{
+    font-family: var(--montserrar);
+}
+a{
+    text-decoration: none;
+    font-family: var(--font-harry);
+    color: var(--amarelo);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.intro h1, h2{
+    font-family: var(--font-harry);
+    font-size: 9rem;
+    color: var(--amarelo);
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;  
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(/img/baner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode:multiply;
+    background-attachment: fixed;
+}
+.summary, .preamble {
+    width: 700px;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 7px;
+    color: var(--amarelo);
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid transparent;
+    border-image: linear-gradient(90deg, transparent, var(--amarelo), transparent) 1;
+}
+.summary a{
+    text-decoration: none   ;
+}
+.supporting{
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+    background: linear-gradient(180deg, #741924 40%, red);
+}
+.supporting h3{
+    text-align: center;
+    font-family: var(--font-harry);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.explanation{
+    background-image: url(/img/pg1.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode:multiply;
+    color: white;
+    text-align: center;
+}
+.explanation {
+    background-image: url(/img/pg1.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.explanation p {
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+.explanation:hover p {
+    opacity: 1;
+}
+.participation{
+    background-image: url(/img/pg3.jpg  );
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode:multiply;
+    color: white;
+}
+.participation p {
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+.participation:hover p {
+    opacity: 1;
+}
+.benefits{
+    background-image: url(/img/pg2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode:multiply;
+    color: white;
+}
+.benefits p {
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+.benefits:hover p {
+    opacity: 1;
+}
+.requirements{
+    background-image: url(/img/pg4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 2rem;
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode:multiply;
+    color: white;
+}
+.requirements p {
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+.requirements:hover p {
+    opacity: 1;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+footer a:hover{
+    color: var(--verde);
+}
+.wrapper{
+    display: flex;
+    background: linear-gradient(#366447,black );
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    align-items: center;
+}
+.wrapper li{
+    margin: 2rem 0px;
+}
+.wrapper a:hover{
+    color: var(--vermelho);
+}
+.wrapper h3{
+    font-family: var(--font-harry);
+    font-size: 5rem;
+    color: white;
+}
+/* Estilo para tablets */
+@media (max-width: 1000px) {
+    .intro h1, h2{
+        font-size: 6rem;
+    }
+    .supporting{
+        flex-wrap: wrap;
+    }
+    .explanation h3, .participation h3, .benefits h3, .requirements h3 {
+        font-size: 5rem;
+    }
+    .explanation p, .participation p, .benefits p, .requirements p {
+        opacity: 1;
+        font-size: 1.6rem;
+    }
+    footer{
+        flex-direction: row;
+        padding-bottom: 4rem;
+        justify-content: center;
+        margin-left: 100px;
+    }
+    .wrapper h3{
+        font-size: 3rem;
+    }
+}
+
+/* Estilo para tablets e celulares médios (paisagem e retrato) */
+@media (max-width: 768px) {
+    footer{
+        gap: 5rem;
+    }
+    .explanation p, .participation p, .benefits p, .requirements p {
+        opacity: 1;
+        font-size: 1.3rem;
+    }
+    .wrapper h3{
+        font-size: 2rem;
+    }
+    .wrapper{
+        padding: 2rem 1rem;
+
+    }
+}
+
+/* Estilo para celulares pequenos */
+@media (max-width: 576px) {
+    .intro h1, h2{
+        font-size: 4rem;
+    }
+    .summary, .preamble {
+        width: 400px;
+        font-size: 1.1rem;  
+    }
+    .explanation, .participation, .benefits, .requirements {
+        width: 400px;
+        transform: translatex(60px);
+        border-radius: 20px;
+        margin-top: 10px;
+        box-shadow: 3px 3px 7px black;
+    }
+    .explanation p, .participation p, .benefits p, .requirements p {
+        font-size: 1.1rem;
+    }
+    .explanation h3, .participation h3, .benefits h3, .requirements h3 {
+        font-size: 4rem;
+    }
+    footer{
+        gap: 3rem;
+    }
+    .wrapper h3{
+        font-size: 2rem;
+    }
+    .wrapper{
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+/* Estilo para celulares muito pequenos */
+@media (max-width: 480px) {
+    .intro h1, h2{
+        font-size: 3rem;
+    }
+    .summary, .preamble {
+        width: 300px;
+        font-size: 1rem;  
+    }
+    .explanation, .participation, .benefits, .requirements {
+        width: 300px;
+        transform: translatex(60px);
+        border-radius: 20px;
+        margin-top: 10px;
+        box-shadow: 3px 3px 7px black;
+        height: 600px;
+    }
+    .explanation p, .participation p, .benefits p{
+        font-size: 1rem;
+    }
+    .requirements p {
+        font-size: 0.8rem;
+    }
+    .explanation h3, .participation h3, .benefits h3, .requirements h3 {
+        font-size: 3rem;
+    }
+    footer{
+        gap: 2rem;
+    }
+    .wrapper h3{
+        font-size: 2rem;
+    }
+    .wrapper{
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+@media (max-width: 162px){
+    .intro h1, h2{
+        font-size: 0.8rem;
+    }
+    .summary, .preamble {
+        width: 70px;
+        font-size: 0.5rem;  
+    }
+    .explanation, .participation, .benefits, .requirements {
+        width: 50px;
+        border-radius: 20px;
+        margin-top: 10px;
+        box-shadow: 3px 3px 7px black;
+        height: 600px;
+    }
+    .explanation p, .participation p, .benefits p{
+        font-size: 1rem;
+    }
+    .requirements p {
+        font-size: 0.8rem;
+    }
+    .explanation h3, .participation h3, .benefits h3, .requirements h3 {
+        font-size: 3rem;
+    }
+    footer{
+        gap: 2rem;
+    }
+    .wrapper h3{
+        font-size: 2rem;
+    }
+    .wrapper{
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
